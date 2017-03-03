@@ -330,7 +330,7 @@
                                                 <ColumnDefinition />
                                             </Grid.ColumnDefinitions>
 
-                                            <TextBlock Name="NAME" Text="{Binding MHZ, Mode=OneWay}" TextAlignment="Right" Grid.Column="0" Margin="2" />
+                                            <TextBlock Name="MHZ" Text="{Binding MHZ, Mode=OneWay}" TextAlignment="Right" Grid.Column="0" Margin="2" />
                                             <TextBox Name="VALUE" Text="{Binding VALUE, Mode=OneWay}" TextAlignment="Center" Grid.Column="1" Margin="2" HorizontalAlignment="Center" Width="688" />
                                         </Grid>
                                     </DataTemplate>
