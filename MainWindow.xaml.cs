@@ -611,7 +611,12 @@ namespace PolarisBiosEditor
 
                         listVRAM.Items.Clear();
                         for (var i = 0; i < atom_vram_info.ucNumOfVRAMModule; i++) {
-                            listVRAM.Items.Add(Encoding.UTF8.GetString(atom_vram_entries[i].strMemPNString));
+                            String vram = Encoding.UTF8.GetString(atom_vram_entries[i].strMemPNString);
+
+                            if (vram.IndexOf('\0') > 0)
+                                vram = vram.Remove(vram.IndexOf('\0'));
+
+                            listVRAM.Items.Add(vram);
                         }
                         listVRAM.SelectedIndex = 0;
                         atom_vram_index = listVRAM.SelectedIndex;
