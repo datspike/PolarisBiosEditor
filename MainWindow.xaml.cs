@@ -564,7 +564,7 @@ namespace PolarisBiosEditor
                             NAME = "Max Temp. (C)",
                             VALUE = atom_fan_table.usTMax / 100
                         });
-						tableFAN.Items.Add(new {
+                        tableFAN.Items.Add(new {
                             NAME = "Target Temp. (C)",
                             VALUE = atom_fan_table.ucTargetTemperature
                         });
@@ -792,7 +792,7 @@ namespace PolarisBiosEditor
                         atom_fan_table.usTHigh = (UInt16)(num * 100);
                     } else if (name == "Max Temp. (C)") {
                         atom_fan_table.usTMax = (UInt16)(num * 100);
-					} else if (name == "Target Temp. (C)") {
+                    } else if (name == "Target Temp. (C)") {
                         atom_fan_table.ucTargetTemperature = (Byte)num;
                     } else if (name == "Min PWM (%)") {
                         atom_fan_table.usPWMMin = (UInt16)(num * 100);
