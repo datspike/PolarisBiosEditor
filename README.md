@@ -1,6 +1,11 @@
 # PolarisBiosEditor v1.4
 ![PREVIEW](http://puu.sh/pRjD9/e085caaf23.png)
 
+### v1.4 + fan
+- Target temp setting
+- Min PWM setting
+- All available fan settings
+
 ### v1.4
 - Minor fixes
 - Added validation
