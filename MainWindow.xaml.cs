@@ -596,6 +596,46 @@ namespace PolarisBiosEditor
                             NAME = "Acoustic Limit (MHz)",
                             VALUE = atom_fan_table.ulMinFanSCLKAcousticLimit / 100
                         });
+						tableFAN.Items.Add(new {
+							NAME = "ucRevId",
+							VALUE = atom_fan_table.ucRevId
+						});
+						tableFAN.Items.Add(new {
+							NAME = "ucFanControlMode",
+							VALUE = atom_fan_table.ucFanControlMode
+						});
+						tableFAN.Items.Add(new {
+							NAME = "ucMinimumPWMLimit",
+							VALUE = atom_fan_table.ucMinimumPWMLimit
+						});
+						tableFAN.Items.Add(new {
+							NAME = "usFanGainEdge",
+							VALUE = atom_fan_table.usFanGainEdge
+						});
+						tableFAN.Items.Add(new {
+							NAME = "usFanGainHotspot",
+							VALUE = atom_fan_table.usFanGainHotspot
+						});
+						tableFAN.Items.Add(new {
+							NAME = "usFanGainLiquid",
+							VALUE = atom_fan_table.usFanGainLiquid
+						});
+						tableFAN.Items.Add(new {
+							NAME = "usFanGainVrVddc",
+							VALUE = atom_fan_table.usFanGainVrVddc
+						});
+						tableFAN.Items.Add(new {
+							NAME = "usFanGainVrMvdd",
+							VALUE = atom_fan_table.usFanGainVrMvdd
+						});
+						tableFAN.Items.Add(new {
+							NAME = "usFanGainPlx",
+							VALUE = atom_fan_table.usFanGainPlx
+						});
+						tableFAN.Items.Add(new {
+							NAME = "usFanGainHbm",
+							VALUE = atom_fan_table.usFanGainHbm
+						});
 
                         tableGPU.Items.Clear();
                         for (var i = 0; i < atom_sclk_table.ucNumEntries; i++) {
@@ -808,7 +848,27 @@ namespace PolarisBiosEditor
                         atom_fan_table.usFanOutputSensitivity = (UInt16)num;
                     } else if (name == "Acoustic Limit (MHz)") {
                         atom_fan_table.ulMinFanSCLKAcousticLimit = (UInt32)(num * 100);
-                    }
+					} else if (name == "ucRevId") {
+						atom_fan_table.ucRevId = (Byte)num;
+					} else if (name == "ucFanControlMode") {
+						atom_fan_table.ucFanControlMode = (Byte)num;
+					} else if (name == "ucMinimumPWMLimit") {
+						atom_fan_table.ucMinimumPWMLimit = (Byte)num;
+					} else if (name == "usFanGainEdge") {
+						atom_fan_table.usFanGainEdge = (UInt16)(num);
+					} else if (name == "usFanGainHotspot") {
+						atom_fan_table.usFanGainHotspot = (UInt16)(num);
+					} else if (name == "usFanGainLiquid") {
+						atom_fan_table.usFanGainLiquid = (UInt16)(num);
+					} else if (name == "usFanGainVrVddc") {
+						atom_fan_table.usFanGainVrVddc = (UInt16)(num);
+					} else if (name == "usFanGainVrMvdd") {
+						atom_fan_table.usFanGainVrMvdd = (UInt16)(num);
+					} else if (name == "usFanGainPlx") {
+						atom_fan_table.usFanGainPlx = (UInt16)(num);
+					} else if (name == "usFanGainHbm") {
+						atom_fan_table.usFanGainHbm = (UInt16)(num);
+					}
                 }
 
                 for (var i = 0; i < tableGPU.Items.Count; i++) {
